@@ -39,6 +39,14 @@ import MainPage from "./pages/MainPage"; // Main Page
 import MainLayout from "./components/MainLayout"; // Layout for Main Pages
 import UserDashboard from "./pages/UserDashboard";
 import UserDetails from "./pages/AdminPages/Pages/UserDetails";
+import WeddingLoan from "./pages/WeddingLoan";
+import BussnissLoan from "./pages/BussnissLoan";
+import HomeLoan from "./pages/HomeLoan";
+// import MarriageLoan from "./pages/Education";
+import Education from "./pages/Education";
+// import BussnissLoan from "./pages/BussnissLoan";
+
+
 
 function AppRouter() {
   return (
@@ -48,6 +56,12 @@ function AppRouter() {
       <Route index element={<App />} />
       <Route path="/auth" element={<Auth />} />
       <Route path="/site" element={<MainPage />} />
+
+      <Route path="/weddingLoan" element={<WeddingLoan/>} />
+      <Route path="/bussnisLoan" element={<BussnissLoan/>} />
+      <Route path="/homeLoan" element={<HomeLoan/>} />
+      <Route path="/education" element={<Education/>} />
+
       <Route path="/user" element={<UserDashboard />} />
 
       {/* </Route> */}
