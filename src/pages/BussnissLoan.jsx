@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import UserInfoModal from "../components/userInfoModal";
 
 export default function BussnissLoan() {
   const maxLoanLimit = 1000000; // 10 Lakh limit
@@ -170,6 +171,7 @@ export default function BussnissLoan() {
             <p className="text-gray-700">
               <strong>Monthly Installment:</strong> PKR {loanBreakdown.monthlyInstallment}
             </p>
+            <UserInfoModal />
           </div>
         )}
       </div>

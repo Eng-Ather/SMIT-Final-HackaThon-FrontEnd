@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import UserInfoModal from "../components/userInfoModal";
 
 export default function Education() {
   const [category, setCategory] = useState("");
@@ -162,6 +163,8 @@ export default function Education() {
             <p className="text-gray-700">
               <strong>Monthly Installment:</strong> PKR {loanBreakdown.monthlyInstallment}
             </p>
+
+            <UserInfoModal />
           </div>
         )}
       </div>

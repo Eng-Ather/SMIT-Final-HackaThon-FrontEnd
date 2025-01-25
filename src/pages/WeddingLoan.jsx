@@ -1,100 +1,6 @@
-// export default function WeddingLoan() {
-//   return (
-//     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
-//       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
-//         <h1 className="text-3xl font-semibold text-cyan-800 text-center mb-6">
-//           Wedding Loan Application
-//         </h1>
-
-//         {/* Form */}
-//         <form>
-//           {/* Subcategories Dropdown */}
-//           <div className="mb-4">
-//             <label
-//               htmlFor="subcategory"
-//               className="block text-gray-700 font-medium mb-2"
-//             >
-//               Subcategory
-//             </label>
-//             <select
-//               id="subcategory"
-//               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-600"
-//             >
-//               <option value="" disabled selected>
-//                 Select a subcategory
-//               </option>
-//               <option value="valima">Valima</option>
-//               <option value="furniture">Furniture</option>
-//               <option value="valimaFood">Valima Food</option>
-//               <option value="jahez">Jahez</option>
-//             </select>
-//           </div>
-
-//           {/* Maximum Loan */}
-//           <div className="mb-4">
-//             <label
-//               htmlFor="maxLoan"
-//               className="block text-gray-700 font-medium mb-2"
-//             >
-//               Maximum Loan
-//             </label>
-//             <input
-//               type="text"
-//               id="maxLoan"
-//               value="PKR 5 Lakh"
-//               readOnly
-//               className="w-full p-3 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none"
-//             />
-//           </div>
-
-//           {/* Loan Period */}
-//           <div className="mb-4">
-//             <label
-//               htmlFor="loanPeriod"
-//               className="block text-gray-700 font-medium mb-2"
-//             >
-//               Loan Period
-//             </label>
-//             <input
-//               type="text"
-//               id="loanPeriod"
-//               value="3 years"
-//               readOnly
-//               className="w-full p-3 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none"
-//             />
-//           </div>
-
-//           {/* Loan Amount Input */}
-//           <div className="mb-4">
-//             <label
-//               htmlFor="loanAmount"
-//               className="block text-gray-700 font-medium mb-2"
-//             >
-//               Loan Amount
-//             </label>
-//             <input
-//               type="number"
-//               id="loanAmount"
-//               placeholder="Enter loan amount (PKR)"
-//               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-600"
-//             />
-//           </div>
-
-//           {/* Submit Button */}
-//           <button
-//             type="submit"
-//             className="w-full bg-cyan-800 text-white py-3 rounded-lg font-medium hover:bg-cyan-700 transition duration-300"
-//           >
-//             Apply Now
-//           </button>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// }
-// ------------------------------------
 
 import React, { useState } from "react";
+import UserInfoModal from "../components/userInfoModal";
 
 export default function Wedding() {
   const [category, setCategory] = useState("");
@@ -239,6 +145,7 @@ export default function Wedding() {
             <p className="text-gray-700">
               <strong>Monthly Installment:</strong> PKR {loanBreakdown.monthlyInstallment}
             </p>
+            <UserInfoModal />
           </div>
         )}
       </div>
