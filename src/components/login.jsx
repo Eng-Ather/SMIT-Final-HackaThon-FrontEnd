@@ -60,7 +60,7 @@ export default function Login({ closeModal }) {
             navigate("/admin"); // Redirect to admin page
             break;
           case "visitor":
-            navigate("/site"); // Redirect to admin page
+            navigate("/auth"); // Redirect to admin page
             break;
           default:
             alert("Unknown role, please contact support.");
@@ -76,7 +76,7 @@ export default function Login({ closeModal }) {
 
   return (
     <>
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div className="fixed inset-0 bg-blue-50  flex items-center justify-center">
         <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
           <h2 className="text-xl font-semibold mb-4">Login</h2>
           <form onSubmit={handleLogin}>

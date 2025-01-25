@@ -53,7 +53,9 @@ function AuthContextProvider({ children }) {
           Authorization: `Bearer ${currentUserToken}`,
         },
       });
-      setUser(response.data.users); // Setting user data as global state
+      // console.log("User Info: ", response.data.data);
+      
+      setUser(response.data.data); // Setting user data as global state
     } catch (err) {
       console.error("Error fetching user info: ", err);
     } finally {
