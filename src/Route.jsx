@@ -34,23 +34,34 @@ import { Routes, Route } from "react-router-dom";
 import App from "./App"; // Main App component
 import Auth from "./pages/Auth/Auth"; // Authentication Page
 import AdminScreens from "./pages/AdminPages/AdminScreens"; // Admin Dashboard
-import MainScreen from "./pages/AdminPages/Pages/MainScreen"; // Admin Main Screen
+// import MainScreen from "./pages/AdminPages/Pages/MainScreen"; // Admin Main Screen
 import MainPage from "./pages/MainPage"; // Main Page
 import MainLayout from "./components/MainLayout"; // Layout for Main Pages
+import UserDashboard from "./pages/UserDashboard";
+import UserDetails from "./pages/AdminPages/Pages/UserDetails";
 
 function AppRouter() {
   return (
     <Routes>
       {/* Routes for Public Pages */}
-      <Route element={<MainLayout />}>
-        <Route index element={<App />} />
-        <Route path="/auth" element={<Auth />} />
-        <Route path="/site" element={<MainPage />} />
-      </Route>
+      {/* <Route element={<MainLayout />}> */}
+      <Route index element={<App />} />
+      <Route path="/auth" element={<Auth />} />
+      <Route path="/site" element={<MainPage />} />
+      <Route path="/user" element={<UserDashboard />} />
+
+      {/* </Route> */}
 
       {/* Routes for Admin Pages */}
-      <Route element={<AdminScreens />}>
-        <Route path="/admin" element={<MainScreen />} />
+      {/* <Route element={<AdminScreens />}>
+        <Route path="/admin" element={<AdminScreens />} />
+
+      </Route> */}
+
+      {/* Admin Routes */}
+      <Route path="/admin" element={<AdminScreens />}>
+        {/* Nested Route for User Details */}
+        <Route path="userdetails" element={<UserDetails />} />
       </Route>
     </Routes>
   );

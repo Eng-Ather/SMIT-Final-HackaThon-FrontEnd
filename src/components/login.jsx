@@ -41,6 +41,7 @@ export default function Login({ closeModal }) {
         const token = res?.data?.data?.token;
         const currentUser = res?.data?.data?.user;
         console.log("currentUser: ", currentUser);
+        console.log("currentUser.role", currentUser.role);
         console.log("Token: ", token);
 
         setLoading(false);
@@ -55,21 +56,37 @@ export default function Login({ closeModal }) {
         setUser(currentUser);
 
         // Navigate based on user role
-        switch (currentUser.role) {
+        // switch (currentUser.role) {
+        //   case "admin":
+        //     navigate("/admin"); // Redirect to admin page
+        //     break;
+        //   case "visitor":
+        //     navigate("/auth"); // Redirect to admin page
+        //     break;
+        //   default:
+        //     alert("UnAuthorized person !.");
+        //     break;
+        // }
+        switch (currentUser?.role?.toLowerCase()) {
           case "admin":
             navigate("/admin"); // Redirect to admin page
             break;
-          case "visitor":
-            navigate("/auth"); // Redirect to admin page
+        
+          // case "visitor":
+          case "user":
+            navigate("/user"); // Redirect to visitor page
             break;
+        
           default:
-            alert("Unknown role, please contact support.");
+            alert(`Unauthorized person! Role: ${currentUser?.role || "Unknown"}`);
             break;
         }
+        
       })
       .catch((err) => {
         setLoading(false);
         console.error("Error in Login:", err);
+        // alert(err?.response?.data?.message || "Login failed. Please try again.");
         alert("Login failed. Please try again.");
       });
   };
