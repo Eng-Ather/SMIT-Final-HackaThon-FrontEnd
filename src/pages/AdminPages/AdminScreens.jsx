@@ -1,7 +1,13 @@
 import React from "react";
 import { Outlet } from "react-router";
+import { useContext } from "react";
+import { AuthContext } from "../../context/context";
 
 function AdminScreens() {
+  const {  user } = useContext(AuthContext);
+  console.log("user", user);
+
+  
   return (
     <div className="h-screen bg-gray-100 flex flex-col md:flex-row shadow">
       <div className="bg-cyan-800 w-full md:w-1/6">
