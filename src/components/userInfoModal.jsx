@@ -14,11 +14,15 @@ export default function UserInfoModal() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.log(e.target);
+    
     setUserInfo({ ...userInfo, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+
     console.log("User Info Submitted:", userInfo);
     setIsModalOpen(false); // Close modal after submission
   };
