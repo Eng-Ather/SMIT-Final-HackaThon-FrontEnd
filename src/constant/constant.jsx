@@ -1,6 +1,6 @@
 const dev_url = "http://localhost:5000";
 
-const prod_url = "https://smit-final-hackathon-backend-production.up.railway.app/";
+const prod_url = "https://smit-final-hackathon-backend-production-a2bf.up.railway.app//";
 
 // const Base_URL = dev_url;
 const Base_URL = prod_url;
@@ -14,4 +14,3 @@ const AppRouts = {
 };
 export default AppRouts;
 
-// https://smit-final-hackathon-backend-create.up.railway.app/
